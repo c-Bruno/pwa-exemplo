@@ -5,6 +5,21 @@ import ComicTemplate from './ComicTemplate';
 
 function App() {
   const [comics, setComics] = useState([]);
+  const [orientation, setOrientation] = useState('');
+
+  useEffect(() => {
+    const handleOrientationChange = () => {
+      const newOrientation = window.innerWidth > window.innerHeight ? 'landscape' : 'portrait';
+      setOrientation(newOrientation);
+    };
+
+    window.addEventListener('resize', handleOrientationChange);
+    handleOrientationChange();
+
+    return () => {
+      window.removeEventListener('resize', handleOrientationChange);
+    };
+  }, []);
 
   useEffect(() => {
     async function fetchData() {
