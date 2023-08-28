@@ -1,0 +1,16 @@
+{
+  "short_name": "Comics",
+  "name": "Comics",
+  "icons": [
+    {
+      "src": "vite.svg",
+      "sizes": "144x144",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
